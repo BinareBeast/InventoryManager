@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "281408166905",
+    "firebase_url": "https://billgenerate-1338b-default-rtdb.firebaseio.com",
+    "project_id": "billgenerate-1338b",
+    "storage_bucket": "billgenerate-1338b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281408166905:android:f103ff932fa5bcafeefb28",
+        "android_client_info": {
+          "package_name": "com.gknagro.billgenerate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8XEW4SpNQtY7UpMycBerEui5ewBU96wE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281408166905:android:d7001461dc9a2166eefb28",
+        "android_client_info": {
+          "package_name": "com.gknagro.inventorymanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8XEW4SpNQtY7UpMycBerEui5ewBU96wE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
