@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:layout_height="60dp"
+    android:gravity="center"
     android:orientation="horizontal">
 
-
-
     <TextView
-        android:id="@+id/productname"
+        android:id="@+id/pid"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:textSize="17dp"
+        android:text="Id"/>
+    <TextView
+        android:id="@+id/pname"
+        android:layout_width="0dp"
+        android:textSize="17dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
         android:text="Name"/>
 
     <TextView
-        android:id="@+id/productprice"
+        android:id="@+id/pprice"
+        android:textSize="17dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_margin="10dp"
         android:text="Price"/>
 
-    <TextView
-        android:id="@+id/productquantity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Quantity"/>
 
-
-
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"/>
 </LinearLayout>

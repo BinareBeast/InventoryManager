@@ -1,4 +1,4 @@
-package com.gknagro.inventorymanager;
+package com.gknagro.inventorymanager.Activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,13 +6,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.google.firebase.Firebase;
+import com.gknagro.inventorymanager.Constructors.Product;
+import com.gknagro.inventorymanager.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,11 +19,12 @@ public class AddProduct extends AppCompatActivity {
     DatabaseReference databaseReference;
     EditText prid,prname,prprice;
     Button submit;
+    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
-
+        auth = FirebaseAuth.getInstance();
         prid= findViewById(R.id.id);
         prname = findViewById(R.id.name);
         prprice = findViewById(R.id.price);
@@ -56,7 +54,8 @@ public class AddProduct extends AppCompatActivity {
     }
     private void addNewProduct(String id, String name, int price) {
         Product product = new Product(id, name, price);
-        databaseReference.child("products").child(id).setValue(product);
+        databaseReference.child("products").push().setValue(product);
+//        databaseReference.child("products").child(Objects.requireNonNull(auth.getCurrentUser()).getUid()).setValue(product);
         Toast.makeText(this,"Launch Success!",Toast.LENGTH_LONG).show();
     }
 }

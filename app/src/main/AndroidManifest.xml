@@ -12,14 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InventoryManager"
         tools:targetApi="31">
-        <activity android:name=".AdminActivity"></activity>
-        <activity android:name=".AddtoCart"></activity>
-        <activity android:name=".ManagerActivity"/>
-        <activity android:name=".AddProduct"/>
-        <activity android:name=".EmployeeActivity"/>
-        <activity android:name=".AddUser"/>
+
+        <activity android:name=".Activity.AdminActivity" />
+        <activity android:name=".Activity.SearchProduct" />
+        <activity android:name=".Activity.ManagerActivity" />
+        <activity android:name=".Activity.AddProduct" />
+        <activity android:name=".Activity.EmployeeActivity" />
+        <activity android:name=".Activity.AddUser" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
