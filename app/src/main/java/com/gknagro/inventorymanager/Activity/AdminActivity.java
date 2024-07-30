@@ -1,24 +1,18 @@
-package com.gknagro.inventorymanager;
+package com.gknagro.inventorymanager.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
 import androidx.core.view.GravityCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
+import com.gknagro.inventorymanager.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class AdminActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
@@ -44,7 +38,7 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         makebill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdminActivity.this,AddtoCart.class));
+                startActivity(new Intent(AdminActivity.this,SearchProduct.class));
             }
         });
 
