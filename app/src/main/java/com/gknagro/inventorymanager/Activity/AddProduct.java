@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gknagro.inventorymanager.Constructors.Product;
+import com.gknagro.inventorymanager.ModelClass.Product;
 import com.gknagro.inventorymanager.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;

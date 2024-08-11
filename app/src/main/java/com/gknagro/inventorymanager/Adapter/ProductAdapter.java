@@ -8,19 +8,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.gknagro.inventorymanager.Constructors.Product;
+import com.gknagro.inventorymanager.ModelClass.Product;
 import com.gknagro.inventorymanager.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder>{
+
     private List<Product> productList;
+    private final RecyclerViewInterface recyclerViewInterface;
 
 
-    public ProductAdapter(List<Product> productList) {
+    public ProductAdapter(List<Product> productList, RecyclerViewInterface recyclerViewInterface) {
         this.productList = productList;
-
+        this.recyclerViewInterface = recyclerViewInterface;
     }
    
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
@@ -28,11 +30,24 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         public TextView priceTextView;
         public TextView idTextView;
 
-        public ProductViewHolder(View itemView) {
+        public ProductViewHolder(View itemView,RecyclerViewInterface recyclerViewInterface) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.pname);
             priceTextView = itemView.findViewById(R.id.pprice);
             idTextView = itemView.findViewById(R.id.pid);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                   if(recyclerViewInterface!= null){
+                       int pos = getAbsoluteAdapterPosition();
+                       if(pos != RecyclerView.NO_POSITION){
+                           recyclerViewInterface.onItemClick(pos);
+                       }
+
+                   }
+                }
+            });
 
         }
     }
@@ -41,7 +56,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public ProductAdapter.ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.searchitem, parent, false);
-        return new ProductViewHolder(itemView);
+        return new ProductViewHolder(itemView,recyclerViewInterface);
     }
 
     @Override

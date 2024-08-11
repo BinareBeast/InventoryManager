@@ -23,7 +23,14 @@
          android:autofillHints="Search Product"
          android:id="@+id/searchproduct"
          />
+
     </LinearLayout>
+    <Button
+        android:id="@+id/btn"
+        android:textSize="17dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="cart"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
