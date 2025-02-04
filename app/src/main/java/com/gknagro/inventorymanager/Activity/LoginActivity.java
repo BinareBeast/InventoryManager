@@ -114,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, ManagerActivity.class));
                 break;
             case "employee":
-                startActivity(new Intent(LoginActivity.this, EmployeeActivity.class));
+//                startActivity(new Intent(LoginActivity.this, SearchProduct.class));
                 break;
             default:
                 Toast.makeText(LoginActivity.this, "Role not recognized", Toast.LENGTH_SHORT).show();

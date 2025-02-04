@@ -1,61 +1,76 @@
 package com.gknagro.inventorymanager.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.Spinner;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
-import com.gknagro.inventorymanager.ModelClass.Product;
+import com.gknagro.inventorymanager.ModelClass.Item;
 import com.gknagro.inventorymanager.R;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class AddProduct extends AppCompatActivity {
-
+    EditText idet,nameet,priceet,piceset;
+    Button update;
     DatabaseReference databaseReference;
-    EditText prid,prname,prprice;
-    Button submit;
-    FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_product);
-        auth = FirebaseAuth.getInstance();
-        prid= findViewById(R.id.id);
-        prname = findViewById(R.id.name);
-        prprice = findViewById(R.id.price);
-        submit = findViewById(R.id.addnewproduct);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.add_product);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference();
+        idet = findViewById(R.id.id);
+        nameet = findViewById(R.id.name);
+        priceet = findViewById(R.id.price);
+        piceset = findViewById(R.id.pices);
+        update = findViewById(R.id.addproduct);
+        databaseReference = FirebaseDatabase.getInstance().getReference("products");
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insert();
+                String id = idet.getText().toString().trim();
+                String name = nameet.getText().toString().trim();
+                String price = priceet.getText().toString().trim();
+                String pieces = piceset.getText().toString().trim();
+
+                if (TextUtils.isEmpty(id) ){
+                    idet.setError(" * Required");
+                    return;
+                }
+                if(TextUtils.isEmpty(name)){
+                    nameet.setError(" * Required");
+                    return;
+                }
+                if(TextUtils.isEmpty(price)){
+                    priceet.setError(" * Required");
+                    return;
+                }
+                if(TextUtils.isEmpty(pieces)) {
+                    piceset.setError(" * Required");
+                    return;
+                }
+
+                int pricei = Integer.parseInt(price);
+                int piecesi = Integer.parseInt(pieces);
+
+                Item product = new Item(id,name,pricei,piecesi);
+                databaseReference.child(product.getId()).setValue(product);
+                startActivity(new Intent(AddProduct.this,AdminActivity.class).putExtra("fragmentid",2));
             }
         });
 
-    }
-    protected void insert(){
-        String id = prid.getText().toString().trim();
-        String name = prname.getText().toString().trim();
-        String price = prprice.getText().toString().trim();
 
-        if(id.isEmpty() || name.isEmpty() || price.isEmpty()){
-            Toast.makeText(this,"Enter Required Fields",Toast.LENGTH_SHORT).show();
-            return;
-        }
-        addNewProduct(id,name,Integer.parseInt(price));
-
-    }
-    private void addNewProduct(String id, String name, int price) {
-        Product product = new Product(id, name, price);
-        databaseReference.child("products").push().setValue(product);
-//        databaseReference.child("products").child(Objects.requireNonNull(auth.getCurrentUser()).getUid()).setValue(product);
-        Toast.makeText(this,"Launch Success!",Toast.LENGTH_LONG).show();
     }
 }

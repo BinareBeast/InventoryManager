@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:title="Product">
+            <menu>
+                <item android:title="Add Product"
+                    android:id="@+id/addproduct"/>
+                <item android:title="Remove Product"
+                    android:id="@+id/removeproduct"/>
+                <item android:title="Update Product"
+                    android:id="@+id/updateproduct"/>
+            </menu>
+        </item>
+        <item
+            android:title="Users">
+            <menu>
+                <item android:title="Add User"
+                    android:id="@+id/adduser"/>
+                <item android:title="Remove User"
+                    android:id="@+id/removeuser"/>
+                <item android:title="Update User"
+                    android:id="@+id/updateuser"/>
+            </menu>
+        </item>
+
+    </menu>

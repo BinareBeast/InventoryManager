@@ -1,66 +1,61 @@
 package com.gknagro.inventorymanager.Activity;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.gknagro.inventorymanager.R;
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
-public class AdminActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
+public class AdminActivity extends AppCompatActivity   {
 
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
-    Button makebill;
+
+    BottomNavigationView bottomNavigationView;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin);
+        setContentView(R.layout.admin);
 
-        drawerLayout = findViewById(R.id.main);
-        NavigationView navigationView = findViewById(R.id.navview);
-        makebill = findViewById(R.id.tomakebill);
-        navigationView.setNavigationItemSelectedListener(this);
-
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        makebill.setOnClickListener(new View.OnClickListener() {
+        int fragmentid = getIntent().getIntExtra("fragmentid",1);
+        if(fragmentid == 2) replaceFragment(new Product());
+        else replaceFragment(new Home());
+        bottomNavigationView = findViewById(R.id.bottomnav);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(AdminActivity.this,SearchProduct.class));
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.home) {
+                    replaceFragment(new Home());
+                    return true;
+                } else if (item.getItemId() == R.id.items) {
+                    replaceFragment(new Product());
+                    return true;
+                }
+                return false;
             }
         });
 
-    }
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if(savedInstanceState == null){
 
-            if(item.getItemId() == R.id.addproduct){
-                startActivity(new Intent(this, AddProduct.class));
-            }
-            else if(item.getItemId() == R.id.adduser)
-                startActivity(new Intent(this,AddUser.class));
-
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
-    }
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
         }
+
+    }
+    protected void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout,fragment);
+        fragmentTransaction.commit();
     }
 }

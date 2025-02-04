@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activity.Home">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GKN Agro "
+        android:textStyle="bold"
+        android:textSize="19dp"
+        android:layout_margin="13dp"
+        android:textColor="#53E305"
+        />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:columnCount="2"
+        android:rowCount="3">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            app:cardBackgroundColor="#C6EDD0"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/totalrevenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="$2398"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Revenue "
+                    android:textColor="#19EA34"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:gravity="right"
+                android:text=">"
+                android:textColor="#7E7D7D"
+                android:textSize="25dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            app:cardBackgroundColor="#DCDFF6"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/employeeperformance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Peformance"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Performance"
+                    android:textColor="#888484"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:gravity="right"
+                android:text=">"
+                android:textColor="#7E7D7D"
+                android:textSize="25dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            app:cardBackgroundColor="#DCDFF6"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/stocvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Stock Value"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Value of Items"
+                    android:textColor="#888484"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:gravity="right"
+                android:text=">"
+                android:textColor="#7E7D7D"
+                android:textSize="25dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:elevation="10dp"
+            app:cardBackgroundColor="#DCDFF6"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Topsale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Top Sales"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Product Sales"
+                    android:textColor="#888484"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:gravity="right"
+                android:text=">"
+                android:textColor="#7E7D7D"
+                android:textSize="25dp" />
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gridLayout"
+        android:layout_marginTop="0dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:text="Transactions"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:id="@+id/transaction"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="34dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/makebill"
+            android:layout_alignParentBottom="true"
+            app:cardBackgroundColor="#F4A3D9"
+            android:clickable="true"
+            android:elevation="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bill"
+                android:text="+Bill / Invoice"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout >
+
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\cart.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\cart.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\product.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\product.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\cartitems.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\cartitems.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\activity_add_user.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\activity_add_user.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\activity_employee.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\activity_employee.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\activity_login.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\productitems.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\productitems.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\admin.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\admin.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\customerdetails.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\customerdetails.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\add_product.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\add_product.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\activity_manager.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\activity_manager.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\quantitydialog.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\quantitydialog.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\home.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\home.xml"
+    },
+    {
+        "merged": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-mergeDebugResources-47:\\layout\\addingitems.xml",
+        "source": "D:\\InventoryManager\\daemon\\8.6\\com.gknagro.inventorymanager.app-main-50:\\layout\\addingitems.xml"
+    },
+    {
+        "merged": "com.gknagro.inventorymanager.app-mergeDebugResources-47:/layout/cart.xml",
+        "source": "com.gknagro.inventorymanager.app-main-50:/layout/cart.xml"
+    }
+]

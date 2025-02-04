@@ -1,0 +1,15 @@
+com.google.android.libraries.ads.mobile.sdk
+drawable admob_close_button_black_circle_white_cross
+drawable admob_close_button_white_circle_black_cross
+string close_button
+string mraid_alert_accept
+string mraid_alert_decline
+string mraid_allow_calendar_event
+string mraid_allow_store_picture
+string mraid_create_calendar_event
+string mraid_save_image
+string native_body
+string native_headline
+string native_media_view
+string test_ad
+xml ad_services_config

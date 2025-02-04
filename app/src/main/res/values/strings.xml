@@ -1,4 +1,10 @@
 <resources>
+    <string-array name="weightage_category">
+        <item>kg</item>
+        <item>ltr</item>
+        <item>ml</item>
+        <item>gr</item>
+    </string-array>
     <string name="app_name">InventoryManager</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nav_open">Open</string>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Invoice</title>
+    <link rel="stylesheet" href="invoice_styles.css">
+</head>
+<body>
+<div class="invoice-box">
+    <header class="invoice-header">
+        <div class="company-info">
+            <h1> GKN Agro pvt.ltd</h1>
+            <p>Dharmapuri TamilNadu<br></p>
+            <p>Email: nithish.ad21@bitsathy.ac.in | Phone: (123) 456-7890</p>
+        </div>
+
+    </header>
+
+    <section class="invoice-details">
+        <div class="invoice-to">
+            <h3>Bill To:</h3>
+            <p>{{customerName}}<br>{{city}}<br>{{phone}}<br>{{pan}}</p>
+        </div>
+        <div class="invoice-title">
+            <h2>Invoice</h2>
+            <p>{{Invoice_No}}</p>
+        </div>
+    </section>
+
+    <div class="table-wrapper">
+        <table class="invoice-table">
+            <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{productrows}}
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3" class="total-label">Subtotal</td>
+                <td>{{Subtotal}}</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-label">Tax (18%)</td>
+                <td>{{Tax}}</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="total-label">Total</td>
+                <td>{{Total}}</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <footer class="invoice-footer">
+        <p>Thank you for your business!</p>
+        <p>Please make payment by the due date.</p>
+    </footer>
+</div>
+</body>
+</html>
